@@ -1,0 +1,121 @@
+{
+    "utilisateurs": [
+        {
+            "id": 1,
+            "prenom": "Justin",
+            "nom": "Djiyim"
+        },
+        {
+            "id": 2,
+            "prenom": "Fils",
+            "nom": "Fiaga"
+        },
+        {
+            "id": 3,
+            "prenom": "Melvin",
+            "nom": "Ngateu"
+        }
+    ],
+    "livres": [
+        {
+            "id": 1,
+            "titre": "Polaris",
+            "auteur": "Michel Sardou",
+            "genre": "ROMAN",
+            "nbrPages": 50,
+            "statut": "A_LIRE"
+
+        },
+        {
+            "id": 2,
+            "titre": "Polaris 2",
+            "auteur": "Michel Sardou",
+            "genre": "ROMAN",
+            "nbrPages": 50,
+            "statut": "LU",
+            "utilisateurId":2
+        },
+        {
+            "id": 3,
+            "titre": "Orgueil et Préjugiés",
+            "auteur": "Jane Austen",
+            "genre": "ROMAN",
+            "nbrPages": 123,
+            "statut": "LU",
+            "utilisateurId":1
+
+        },
+        {
+            "id": 4,
+            "titre": "1984",
+            "auteur": "George Orwell",
+            "genre": "SF",
+            "nbrPages": 142,
+            "statut": "EN_COURS",
+            "utilisateurId":1
+        },
+        {
+            "id": 5,
+            "titre": "Le Seigneur des anneaux",
+            "auteur": " J.R.R. Tolkien",
+            "genre": "SF",
+            "nbrPages": 50,
+            "statut": "A_LIRE"
+
+        },
+        {
+            "id": 6,
+            "titre": "Chroniques de Saint-Roustan T02- le Grand Déluge doré ",
+            "auteur": "Pierre-Emmanuel Barré",
+            "genre": "POLAR",
+            "nbrPages": 90,
+            "statut": "A_LIRE"
+        },
+        {
+            "id": 7,
+            "titre": "Naruto tome 1",
+            "auteur": "Masashi Kishimoto",
+            "genre": "BD",
+            "nbrPages": 95,
+            "statut": "LU",
+            "utilisateurId":1
+
+        },
+        {
+            "id": 8,
+            "titre": "KEI-HARDE NUANCE",
+            "auteur": "Akkerman Stevo",
+            "genre": "ESSAI",
+            "nbrPages": 142,
+            "statut": "EN_COURS",
+            "utilisateurId":2
+        }
+    ],
+    "sessions": [
+        {
+            "livreId": 2,
+            "date": "25/10/2026",
+            "pagesLues": 45
+        },
+        {
+            "livreId": 3,
+            "date": "27/10/2026",
+            "pagesLues": 123
+        },
+        {
+            "livreId": 4,
+            "date": "27/10/2026",
+            "pagesLues": 100
+        },
+        {
+            "livreId": 7,
+            "date": "24/10/2026",
+            "pagesLues": 95
+        },
+        {
+            "livreId": 8,
+            "date": "29/10/2026",
+            "pagesLues": 75
+        }
+    ]
+}
