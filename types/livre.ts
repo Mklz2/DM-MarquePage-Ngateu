@@ -7,6 +7,7 @@ export interface Utilisateur {
 }
 export interface Session {
     id: number;
+    utilisateurId: number;
     livreId: number;
     date: string;
     pagesLues: number;
@@ -18,5 +19,4 @@ export interface Livre {
     genre: Genre;
     nbrPages: number;
     statut: Statut;
-    utilisateurId: number;
 }
