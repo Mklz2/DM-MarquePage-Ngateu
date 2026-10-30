@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'mode_modules/react-native';
+
+import { StyleSheet, Text, View } from 'react-native';
 import { Livre } from '../types/livre';
 
 interface CarteLivreProps {
@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         marginHorizontal: 16,
         borderRadius: 8,
-        shadowColor: #000,
-        shadowOffset: {width: 0, heigth: 1},
-        shadowOpacity: {value: 0.2},
+        shadowColor: '#000',
+        shadowOffset: {width: 0, height: 1},
+        shadowOpacity: 0.2,
         shadowRadius: 1.41,
         elevation: 2,
     },
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     },
     titre:{
         fontSize: 16,
-        fontWeigth: 'bold',
+        fontWeight: 900,
         flex: 1,
     },
     auteur:{
@@ -63,7 +63,10 @@ const styles = StyleSheet.create({
     },
     badgeText:{
         fontSize: 10,
-        fontWeigth: 'bold',
+        fontWeight: 'bold',
         color:'#000',
     },
+    badge: {
+        
+    }
 });
