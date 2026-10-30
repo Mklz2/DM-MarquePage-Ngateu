@@ -5,21 +5,45 @@ import { Livre } from '../types/livre';
 interface CarteLivreProps {
     livre: Livre;
 }
+interface BdgInterface {
+    badBg: string,
+    lblClr: string,
+};
 export default function CarteLivre({ livre} : CarteLivreProps) {
-    const getBadgeColor = (statut: string) => {
+    const getBadgeColor = (statut: string): BdgInterface => {
         switch (statut) {
-            case 'LU': return '#4ade80';
-            case 'EN_COURS': return '#facc15';
-            case 'A_LIRE': return '#f87171';
-            default: return '#cbd5e1';
+            case 'LU': return {
+                badBg:'#afeec6',
+                lblClr: '#4ade80',
+            };
+            case 'EN_COURS': return {
+                badBg:'#f1e7c2',
+                lblClr: '#facc15',
+            };
+            case 'A_LIRE': return {
+                badBg:'#f5c5c5',
+                lblClr: '#f87171',
+            };
+            default: return {
+                badBg:'#c1daf9',
+                lblClr: '#cbd5e1',
+            };
+        }
+    };
+    const getBadgeName = (statut: string): string=> {
+        switch (statut) {
+            case 'LU': return "Lu";
+            case 'EN_COURS': return "En cour de lecture";
+            case 'A_LIRE': return "A lire";
+            default: return "Pas Disponible";
         }
     };
     return(
         <View style={styles.card}>
             <View style={styles.header}>
                 <Text style={styles.titre}>{livre.titre}</Text>
-                <View style={[styles.badge, {backgroundColor: getBadgeColor(livre.statut)}]}>
-                    <Text style={styles.badgeText}>{livre.statut}</Text>
+                <View style={[styles.badge, {backgroundColor: getBadgeColor(livre.statut).badBg}]}>
+                    <Text style={{...styles.badgeText, color:getBadgeColor(livre.statut).lblClr}}>{getBadgeName(livre.statut)}</Text>
                 </View>
             </View>
             <Text style={styles.auteur}>{livre.auteur}</Text>
@@ -67,6 +91,8 @@ const styles = StyleSheet.create({
         color:'#000',
     },
     badge: {
-        
+        borderRadius: 3,
+        paddingHorizontal: 3,
+        paddingVertical: 2,
     }
 });

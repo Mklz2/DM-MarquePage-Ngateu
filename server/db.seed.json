@@ -88,30 +88,35 @@
     ],
     "sessions": [
         {
+            "id": 1,
             "livreId": 2,
             "utilisateurId":2,
             "date": "25/10/2026",
             "pagesLues": 45
         },
         {
+            "id": 2,
             "livreId": 3,
             "utilisateurId":1,
             "date": "27/10/2026",
             "pagesLues": 123
         },
         {
+            "id": 3,
             "livreId": 4,
             "utilisateurId":1,
             "date": "27/10/2026",
             "pagesLues": 100
         },
         {
+            "id": 4,
             "livreId": 7,
             "utilisateurId":1,
             "date": "24/10/2026",
             "pagesLues": 95
         },
         {
+            "id": 5,
             "livreId": 8,
             "utilisateurId":2,
             "date": "29/10/2026",
