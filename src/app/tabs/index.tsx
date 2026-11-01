@@ -1,4 +1,5 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import CarteLivre from '../../../components/CarteLivre';
 import donnees from '../../../server/db.seed.json';
 import { Livre } from '../../../types/livre';
@@ -10,9 +11,14 @@ export default function Index() {
       <FlatList
         data={livres}
         keyExtractor={(item)=>String(item.id)}
-        renderItem={({ item }) => <CarteLivre livre={item} />}
+        renderItem={({item}) => (
+          <Link href={`/livres/${item.id}` as any} asChild>
+            <Pressable>
+              <CarteLivre livre={item}/>
+            </Pressable>
+          </Link>
+        )}
       ></FlatList>
-        
     </View>
   );
 }
