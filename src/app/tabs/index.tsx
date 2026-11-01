@@ -1,13 +1,26 @@
-import { Link } from "expo-router";
-import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import { Link, Stack, useRouter } from "expo-router";
+import { Button, FlatList, Pressable, StyleSheet, View } from "react-native";
 import CarteLivre from '../../../components/CarteLivre';
 import donnees from '../../../server/db.seed.json';
 import { Livre } from '../../../types/livre';
 export default function Index() {
   const livres = donnees.livres as Livre[];
+  const router = useRouter();
   return (
-    <View style={styles.container}>
-      <Text style={styles.headerTitle}>Ma Bibliothèque</Text>
+   
+
+    <View style={{ flex: 1 }}>
+      <Stack.Screen 
+        options={{ 
+          title: 'Ma Bibliothèque',
+          headerStyle: { backgroundColor: '#1e293b' }, 
+          headerTintColor: '#4ade80',                 
+          headerTitleStyle: {...styles.headerTitle},
+          headerRight: () => (
+            <Button onPress={() => router.navigate('/livres/nouveau')} title="+" color="#4ade80" />
+          ),
+        }} 
+      /> 
       <FlatList
         data={livres}
         keyExtractor={(item)=>String(item.id)}
