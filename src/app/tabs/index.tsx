@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import CarteLivre from '../../components/CarteLivre';
-import donnees from '../../server/db.seed.json';
-import { Livre } from '../../types/livre';
+import CarteLivre from '../../../components/CarteLivre';
+import donnees from '../../../server/db.seed.json';
+import { Livre } from '../../../types/livre';
 export default function Index() {
   const livres = donnees.livres as Livre[];
   return (
