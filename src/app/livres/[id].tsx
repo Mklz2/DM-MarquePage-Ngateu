@@ -2,15 +2,9 @@ import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import donnees from '../../../server/db.seed.json';
 import { Livre } from "../../../types/livre";
+import { getBadgeName } from "../../../utilities/formatlivreStatusLabel";
+
 export default function DetailLivreScreen(){
-    const getBadgeName = (statut: string): string=> {
-        switch (statut) {
-            case 'LU': return "Lu";
-            case 'EN_COURS': return "En cour de lecture";
-            case 'A_LIRE': return "A lire";
-            default: return "Pas Disponible";
-        }
-    };
     const{id} = useLocalSearchParams();
     const livreId = Number(id);
     const router = useRouter();

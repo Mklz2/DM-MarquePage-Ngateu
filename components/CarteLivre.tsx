@@ -1,6 +1,7 @@
 
 import { StyleSheet, Text, View } from 'react-native';
 import { Livre } from '../types/livre';
+import { getBadgeName } from '../utilities/formatlivreStatusLabel';
 
 interface CarteLivreProps {
     livre: Livre;
@@ -28,14 +29,6 @@ export default function CarteLivre({ livre} : CarteLivreProps) {
                 badBg:'#c1daf9',
                 lblClr: '#cbd5e1',
             };
-        }
-    };
-    const getBadgeName = (statut: string): string=> {
-        switch (statut) {
-            case 'LU': return "Lu";
-            case 'EN_COURS': return "En cour de lecture";
-            case 'A_LIRE': return "A lire";
-            default: return "Pas Disponible";
         }
     };
     return(

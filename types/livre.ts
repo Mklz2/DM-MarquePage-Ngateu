@@ -1,5 +1,17 @@
-export type Statut = "A_LIRE" | "EN_COURS" | "LU";
-export type Genre = "ROMAN" | "BD" | "ESSAI" | "SF" | "POLAR";
+export enum Genre {
+    ROMAN = "ROMAN", 
+    BD =  "BD" ,
+    ESSAI = "ESSAI",
+    SF = "SF",
+    POLAR = "POLAR",
+}
+export const allGenre: Genre[] = [Genre.BD, Genre.ESSAI, Genre.POLAR, Genre.ROMAN, Genre.SF]; 
+export enum Statut {
+    A_LIRE = "A_LIRE", 
+    EN_COURS =  "EN_COURS" ,
+    LU = "LU"
+}
+export const allStatut: Statut[] = [Statut.A_LIRE, Statut.EN_COURS, Statut.LU]; 
 export interface Utilisateur {
     id: number;
     prenom: string;
