@@ -11,7 +11,9 @@ export enum Statut {
     EN_COURS =  "EN_COURS" ,
     LU = "LU"
 }
+
 export const allStatut: Statut[] = [Statut.A_LIRE, Statut.EN_COURS, Statut.LU]; 
+
 export interface Utilisateur {
     id: number;
     prenom: string;
